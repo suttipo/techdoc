@@ -1,0 +1,315 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*#1083EF #1014EF #10EFEB*/
+code > #comment {
+    font-size: 16px;
+    color:rgb(225, 74, 99);
+}
+#navbar {
+    position:fixed;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color:#10EFEB;
+    align-items: baseline;
+}
+#navbar header {
+    width:100%;
+    font-size: 2rem;
+    padding: 2vw;
+    text-align: center;
+    color:#EF1014;
+    border-bottom:.5vw solid #1014EF;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    
+}
+#nav-link-menu {
+    display:flex;
+    flex-direction: colums;
+    flex-wrap:wrap;
+}
+.nav-link {
+    
+    /* border: 1px solid white; */
+    padding: 1vw 0;
+    margin-left: 2vw;
+    font-size: 1rem;
+    color:#1014EF;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-link:hover {
+    background-color: #99eeec;
+}
+
+#main-doc {
+    width:80%;
+    height: auto;
+    margin-left:20%;
+    background-color:#1083EF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.main-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.main-section p {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    color: wheat;
+}
+.main-section header {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+    color: #10EFEB;
+    
+}
+.main-section h3 {
+    font-size: 1.7rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    color: #10EFEB;
+}
+li{
+    font-size: 1.2rem;
+    color:wheat;
+    margin-left: 2.5vw;
+}
+.codebox {
+    background-color:#10EFEB;
+}
+#show_code {
+    color:#1014EF;
+    font-size: 1.2rem;
+    margin-left: 5vw;
+    padding: 2vw 0;
+}
+#show_code span {
+    color:#1014EF;
+    background-color: white;
+}
+.codebox a {
+    margin-left: 50px;
+    font-size: 16px;
+    color:white;
+    background-color: purple;
+    padding:3px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+#show_code_flexgrow {
+    color:#1014EF;
+    font-size: 1.2rem;
+    margin-left: 5vw;
+    padding: 2vw 0;
+}
+#show_code_flexgrow span {
+    color:#1014EF;
+    background-color: white;
+}
+#showFlex {
+    color:#1014EF;
+    font-size: 1.2rem;
+    margin-left: 5vw;
+    padding: 2vw 0;
+}
+#showFlex span {
+    color:#1014EF;
+    background-color: white;
+    padding: .2vw;
+}
+
+/* frame */
+.frame {
+    position:relative;
+    margin:auto;
+    display:block;
+    overflow:hidden;
+    background-color: wheat;
+}
+#frame_1 {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:190px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_2 {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:320px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_3 {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:320px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_4 {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_5 {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_wrap {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_nowrap {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_wrap_rev {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_justify_center {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_justify_flex_start {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_justify_flex_end {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_justify_space {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_justify_between {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:150px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_align_center {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_align_flex_start {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_align_flex_end {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_align_strech {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_align_baseline {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:250px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_content_between {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:350px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_content_stretch {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:650px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_content_center {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:650px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_content_start {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:650px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_content_end {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:650px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+#frame_perfect_center {
+    width:100%; /*ความกว้างส่วนของเนื้อหา iframe ที่ต้องการแสดง*/
+    height:350px; /* ความสูงส่วนของเนื้อหา iframe ที่ต้องการแสดง */
+}
+/* property */
+code {
+    color:blue;
+    padding:3px;
+    background-color:#10EFEB;
+}
+/* value of property */
+code span {
+    color:white;
+}
+p > span {
+    background-color: aliceblue;
+    color:#1083EF;
+    padding: .2rem;
+}
+/*table*/
+table {
+    width:100%;
+    border:1px solid #10EFEB;
+}
+th {
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    color:purple;
+    padding: 1.5rem;
+    border-bottom: 1px solid #10EFEB;;
+}
+td > a {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+}
+td {
+    padding: 1rem;
+}
+td > a:hover {
+    background-color: #82bcf2;
+}
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 16px;
+    }
+    #navbar {
+        position:fixed;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:100%;
+        height: 40vh;
+        z-index: 99;
+        
+    }
+    #navbar header {
+        width:100%;
+        text-align: center;
+    }
+    #nav-link-menu {
+        width:100%;
+        height:auto;
+        display: flex;
+        flex-wrap:wrap;
+        background-color:#10EFEB;
+    }
+    #nav-link-menu a{
+        width:100%;
+        font-size: 5px;
+        text-align: center;
+       
+    }
+    
+    #main-doc {
+       width:100%;
+       margin-left: 0;
+        
+    }
+    .main-section {
+        width:95%;
+        padding-top:40vh;
+    }
+}
+    

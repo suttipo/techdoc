@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Element</title>
+    <script src="https://kit.fontawesome.com/52e8c07fea.js" crossorigin="anonymous"></script></script>
+<style>
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-basis Property</h1>
+
+<p>Set the initial length of the third flex item to 200 pixels:</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis:200px">3</div>
+  <div>4</div>
+</div>
+<a href="../index.html"><i style='font-size:24px' class='fas'>&#xf100;</i>back</a>
+</body>
+</html>

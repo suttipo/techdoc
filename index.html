@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+    <title>Technical Documentations Page.</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Flexbox</header>
+        <div id="nav-link-menu">
+            <a class="nav-link" href="#css_flexbox_layout_module">Css Flexbox Layout Module</a>
+            <a class="nav-link" href="#css_flex_container">Css Flex Container</a>
+            <a class="nav-link" href="#css_flex_items">Css Flex Items</a>
+            <a class="nav-link" href="#css_flexbox_items_properties">Css Flex Items Properties</a>
+            <a class="nav-link" href="#css_flex_responsive">CSS Flex Responsive</a>
+        </div>
+        
+    </nav>
+    <main id="main-doc">
+        <section id="css_flexbox_layout_module" class="main-section">
+            <header>Css Flexbox Layout Module</header>
+            <p>Before the Flexbox Layout module, there were four layout modes:</p><br>
+            <ul>
+                <li>Block, for sections in a webpage</li>
+                <li>Inline, for text</li>
+                <li>Table, for two-dimensional table data</li>
+                <li>Positioned, for explicit position of an element</li>
+                
+            </ul><br>
+            <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p><br>
+            <h3>Flexbox Elements</h3>
+            <p>To start using the Flexbox model, you need to first define a flex container.</p><br>
+            <!-- tag code -->
+            <div class="codebox">
+                <p id="show_code">
+                    &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                    }<br>
+    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: <span>20px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                    }  <br>
+                    &lt/style&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtCreate a Flex Container&lt/h1&gt<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt2&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt3&lt/div&gt<br>  
+                &lt/div&gt<br>
+
+                &ltp&gtA Flexible Layout must have a parent element with the &ltem&gtdisplay&lt/em&gt property set to &ltem&gtflex&lt/em&gt.&lt/p&gt<br>
+
+                &ltp&gtDirect child elements(s) of the flexible container automatically becomes flexible items.&lt/p&gt<br>
+
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+                
+                </p>
+                <a href="./flexElement.html">Run Code</a>
+            </div><br><br>
+
+            <p>You will learn more about flex containers and flex items in the next chapters.</p><br><br>
+                                            
+        </section>
+
+        <section id="css_flex_container" class="main-section">
+            <header>CSS Flex Container</header><br><br>
+            <h3>Parent Element (Container)</h3>
+            <p>Like we specified in the previous chapter, this is a flex container (the blue area) with three flex items:</p><br><br>
+            <div id="frame_1" class="frame">
+                <iframe src="./flexElement.html" width='95%'height='1000'frameborder="0"></iframe>
+            </div><br><br>
+            <p>The flex container properties are:</p>
+            <ul>
+                <li><a href="#flex_direction_prop">flex-direction</a></li>
+                <li><a href="#flex_wrap_prop">flex-wrap</a></li>
+                <li><a href="#flex_flow_prop">flex-flow</a></li>
+                <li><a href="#justify_content">justify-content</a></li>
+                <li><a href="#align_items">align-items</a></li>
+                <li><a href="#align_content">align-content</a></li>
+                <li><a href="#perfect_center">Perfect-Center</a></li>
+            </ul><br><br>
+
+<!--flex-direction-property-->            
+            <h3  id="flex_direction_prop">The flex-direction Property</h3>
+            <p>The <span style="color:blue">flex-direction</span> property defines in which direction the container wants to stack the flex items.</p><br><br>
+            
+            <p>The <code>flex-direction: <span>column</span>;</code> represent flex items vertically (from top to bottom)</p><br><br>
+            <div id="frame_2" class="frame">
+                <iframe src="./flex_direc/flex_direction_co.html" width='95%'height='1000'frameborder="0"></iframe>
+            </div><br><br>
+
+            <p>The <code>flex-direction: <span>column-reverse</span>;</code> value stacks the flex items vertically (but from bottom to top):</p><br><br>
+            <div id="frame_3" class="frame">
+                <iframe src="./flex_direc/flex_direction_corev.html" width='95%'height='1000'frameborder="0"></iframe>
+            </div><br><br>
+            <p>The <code>flex-direction: <span>row</span>;</code>value stacks the flex items horizontally (from left to right):</p><br><br>
+            <div id="frame_4" class="frame">
+                <iframe src="./flex_direc/flex_direction_row.html" width='95%'height='1000'frameborder="0"></iframe>
+            </div><br><br>
+            <p>The <code>flex-direction: <span>row-reverse</span>;</code>value stacks the flex items horizontally (but from right to left):</p><br><br>
+            <div id="frame_5" class="frame">
+                <iframe src="./flex_direc/flex_direction_rowrev.html" width='95%'height='1000'frameborder="0"></iframe>
+            </div><br><br>
+
+<!--flex-wrap property-->
+            <h3  id="flex_wrap_prop">The flex-wrap Property</h3>
+            <p>The flex-wrap property specifies whether the flex items should wrap or not.</p><br><br>
+           
+            <p>The examples below have 12 flex items, to better demonstrate the flex-wrap property.</p>
+            <p>The <code>flex-wrap: <span>wrap</span></code>value specifies that the flex items will wrap if necessary:</p><br><br>
+            <div id="frame_wrap" class="frame">
+                <iframe src="./flex_wrap/flex_wrap.html" width='95%'height='220'frameborder="0"></iframe>
+            </div><br><br>
+
+            <p>The <code>flex-wrap: <span>nowrap</span></code>value specifies that the flex items will not wrap (this is default):</p><br><br>
+            <div id="frame_nowrap" class="frame">
+                <iframe src="./flex_wrap/flex_nowrap.html" width='95%'height='220'frameborder="0"></iframe>
+            </div><br><br>
+
+            <p>The <code>flex-wrap:<span>wrap-reverse</span></code>value specifies that the flexible items will wrap if necessary, in reverse order:</p><br><br>
+            <div id="frame_wrap_rev" class="frame">
+                <iframe src="./flex_wrap/flex_wraprev.html" width='95%'height='220'frameborder="0"></iframe>
+            </div><br><br>
+
+<!--flex-flow propperty--> 
+            <h3 id="flex_flow_prop">The flex-flow-property</h3>
+            <p>The<span style="color:blue">flex-flow</span> property is a shorthand property for setting both the <span style="color:blue">flex-direction</span> and <span style="color:blue">flex-wrap</span> properties.</p><br><br>
+            <div class="codebox">
+                <p id="showFlex">
+                        .flex-container {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: <span>flex</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;flex-flow: <span>row wrap</span>;<br>
+                    }
+                </p>
+                
+            </div><br><br>
+
+<!-- The justify-content Property -->   
+            <h3 id="justify_content">The justify-content property</h3>
+            <p>The justify-content property is used to align the flex items:</p><br><br>
+<!-- justify-content: center -->
+            <p>The <code>justify-content:<span>center</span>;</code> value aligns the flex items at the center of the container:</p><br><br>
+            <div id="frame_justify_center" class="frame">
+                <iframe src="./justi_con/justify_con.html" width='95%'height='220'frameborder="0"></iframe>
+            </div><br><br>
+<!-- justift-content: flex-start -->            
+            <p>The <code>justify-content:<span>flex-start</span>;</code> value aligns the flex items at the beginning of the container (this is default):</p><br><br>
+            <div id="frame_justify_flex_start" class="frame">
+                <iframe src="./justi_con/justify_start.html" width='95%'height='220'frameborder="0"></iframe>
+            </div><br><br>
+<!-- justift-content: flex-end -->            
+            <p>The <code>justify-content:<span>flex-end</span>;</code> value aligns the flex items at the end of the container:</p><br><br>
+            <div id="frame_justify_flex_end" class="frame">
+                <iframe src="./justi_con/justify_end.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- justift-content: space-around -->            
+            <p>The <code>justify-content:<span>space-around</span>;</code> value displays the flex items with space before, between, and after the lines:</p><br><br>
+            <div id="frame_justify_space" class="frame">
+                <iframe src="./justi_con/justify_space.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br> 
+<!-- justift-content: space-between -->            
+            <p>The <code>justify-content:<span>space-between</span>;</code> value displays the flex items with space between the lines:</p><br><br>
+            <div id="frame_justify_between" class="frame">
+            <iframe src="./justi_con/justify_between.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- The align-items Property-->   
+            <h3 id="align_items">The align-items Property</h3>
+            <p>The align-items property is used to align the flex items.</p>
+            <p>In these examples we use a 200 pixels high container, to better demonstrate the align-items property.</p><br><br>
+            <p>The <code>align-items:<span>center</span>;</code> value aligns the flex items in the middle of the container:</p><br><br>
+            <div id="frame_align_center" class="frame">
+                <iframe src="./align_items/align_center.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- align_items: flex-start -->    
+            <p>The <code>align_items:<span>flex-start</span>;</code>flex-start value aligns the flex items at the top of the container:</p><br><br>
+            <div id="frame_align_flex_start" class="frame">
+                <iframe src="./align_items/align_flex_start.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- align_items: flex-end -->
+            <p>The <code>align-items:<span>flex-end</span>;</code>value aligns the flex items at the bottom of the container:</p>
+            <div id="frame_align_flex_end" class="frame">
+                <iframe src="./align_items/align_flex_end.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- align_items: strech -->
+            <p>The <code>align-items:<span>strech</span>;</code> value stretches the flex items to fill the container (this is default):</p>
+            <div id="frame_align_strech" class="frame">
+                <iframe src="./align_items/align_strech.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- align_items: baseline -->
+            <p>The <code>align-items:<span>baseline</span>;</code> value aligns the flex items such as their baselines aligns:</p><br><br>
+            <div id="frame_align_baseline" class="frame">
+                <iframe src="./align_items/align_baseline.html" width='95%'height='220'frameborder="0"></iframe>
+</div><br><br>
+<!-- The align-content Property -->
+            <h3 id="align_content">The align-content Property</h3>
+            <p>The align-content property is used to align the flex lines.</p>
+            <p>In these examples we use a 300 pixels high container, with the flex-wrap property set to wrap, to better demonstrate the align-content property.</p><br><br>
+            <p>The <code>align-content:<span>space-between</span>;</code>value displays the flex lines with equal space between them:</p><br><br>
+            <div id="frame_content_between" class="frame">
+                <iframe src="./aling_content/space_between.html" width='100%'height='650'frameborder="0"></iframe>
+</div><br><br>
+<!-- space-around-->
+            <p>The <code>align-content:<span>space-around</span>;</code>value displays the flex lines with space before, between, and after them:</p><br><br>
+            <div id="frame_content_between" class="frame">
+                <iframe src="./aling_content/space_around.html" width='100%'height='650'frameborder="0"></iframe>
+</div><br><br>
+<!-- stretch -->
+            <p>The <code>align-content:<span>stretch</span>;</code> value stretches the flex lines to take up the remaining space (this is default):</p>
+            <div id="frame_content_stretch" class="frame">
+                <iframe src="./aling_content/stretch.html" width='100%'height='650'frameborder="0"></iframe>
+</div><br><br>
+<!-- center -->
+            <p>The <code>align-content:<span>center</span>;</code>value displays display the flex lines in the middle of the container:</p><br><br>
+            <div id="frame_content_center" class="frame">
+                <iframe src="./aling_content/center.html" width='100%'height='650'frameborder="0"></iframe>
+</div><br><br>
+<!-- flex-start -->
+            <p>The <code>align-content:<span>flex-start</span>;</code>value displays the flex lines at the start of the container:</p><br><br>
+            <div id="frame_content_start" class="frame">
+                <iframe src="./aling_content/start.html" width='100%'height='650'frameborder="0"></iframe>
+</div><br><br>
+<!-- flex-end -->
+            <p>The <code>align-content:<span>flex-end</span>;</code>value displays the flex lines at the end of the container: </p><br><br>
+            <div id="frame_content_end" class="frame">
+                <iframe src="./aling_content/end.html" width='100%'height='650'frameborder="0"></iframe>
+</div><br><br>
+<!-- perfect centering-->
+            <h3 id="perfect_center">Perfect Centering</h3><br><br>
+            <p>In the following example we will solve a very common style problem: perfect centering.</p>
+            <p>Solution: Set both the <code>justify-content:<span>center</span>;</code> and <code>align-items:<span>center</span>;</code>the flex item will be perfectly centered:</p><br><br>
+            <div id="frame_perfect_center" class="frame">
+                <iframe src="./aling_content/perfect_center.html" width='100%'height='350'frameborder="0"></iframe>
+</div><br><br>
+        </section>
+
+<!-- ***************** flex-items **************** -->
+
+        <section id="css_flex_items" class="main-section">
+            <header>Css Flex Items.</header>
+            <h3 id="child_element">Child Element(Items)</h3>
+            <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p><br><br>
+            
+            <div id="frame_child_element" class="frame">
+                <iframe src="./flexItems/child.html" width='100%'height='350'frameborder="0"></iframe>
+</div><br><br>
+            <p>The element above represents four blue flex items inside a grey flex container.</p><br><br>
+
+            <p>The flex item properties are:</p>
+
+            <ul>
+                <li><a href="#order_property">order</a></li>
+                <li><a href="#flex_grow">flex-grow</a></li>
+                <li><a href="#flex_shrink">flex-shrink</a></li>
+                <li><a href="#flex_basis">flex-basis</a></li>
+                <li><a href="#flex_prop">Flex Property</a></li>
+                <li><a href="#align_self">align-self</a></li>
+            </ul><br><br>
+<!-- The order property -->    
+            <h3 id="order_property">The Order Property</h3>
+            <p>The order property specifies the order of the flex items.</p><br><br>
+            <div id="frame_order" class="frame">
+                <iframe src="./flexItems/order.html" width='100%'height='350'frameborder="0"></iframe>
+</div><br><br>
+
+<!-- The flex-grow Property -->
+            <h3 id="flex_grow">The flex-grow Property</h3>
+            <p>The <span style="color:rgb(14, 28, 223)">flex-grow</span> property specifies how much a flex item will grow relative to the rest of the flex items.</p>
+            <p>The value must be a number, default value is 0.</p><br><br> 
+            <div class="codebox">
+                <p id="show_code_flexgrow">
+                    &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>align-items: <span>strech</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                    }<br>
+    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: <span>white</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: <span>100px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height: <span>75px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                    }  <br>
+                    &lt/style&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtThe flex-grow Property&lt/h1&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtMake the third flex item grow eight times faster than the other flex items:&lt/p&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt2&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt3&lt/div&gt<br>  
+                &lt/div&gt<br>
+
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+                
+                </p>
+                <a href="./flexItems/flexgrow.html">Run Code</a>
+            </div><br><br>
+                
+            
+<!-- flex-shrink property -->              
+            
+            <h3 id="flex_shrink">The Flex-shrink Property</h3>
+            <p>The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items.</p>
+            <p>The value must be a number, default value is 1.</p><br><br>
+            <div class="codebox">
+                <p id="show_code_flexgrow">
+                    &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>align-items: <span>strech</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                    }<br>
+    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: <span>white</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height: <span>75px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                    }  <br>
+                    &lt/style&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtThe flex-shrink Property&lt/h1&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtDo not let the third flex item shrink as much as the other flex items:&lt/p&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt2&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv style="flex-shrink: 0"&gt3&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt4&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt5&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt6&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt7&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt8&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt9&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt10&lt/div&gt<br>
+                     
+                &lt/div&gt<br>
+
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+                
+                </p>
+                <a href="./flexItems/flexshrink.html">Run Code</a>
+            </div><br><br>
+                </p>
+<!-- The flex-basis Property -->   
+                <h3 id="flex_basis">The flex-basis Property</h3>
+                <p>The flex-basis property specifies the initial length of a flex item.</p><br><br>
+                <div class="codebox">
+                    <p id="show_code_flexgrow">
+                        &ltstyle&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>align-items: <span>strech</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                        }<br>
+        
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: <span>white</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height: <span>75px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                        }  <br>
+                        &lt/style&gt<br>
+                        &lt/head&gt<br>
+                        &ltbody&gt<br>
+    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtThe flex-basis Property&lt/h1&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtSet the initial length of the third flex item to 200 pixels:&lt/p&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt2&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <span>style="flex-basis:200px"</span>&gt3&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt4&lt/div&gt<br>
+                        
+                         
+                    &lt/div&gt<br>
+    
+                    &lt/body&gt<br>
+                    &lt/html&gt<br>
+                    
+                    </p>
+                    <a href="./flexItems/flexbasis.html">Run Code</a>
+                </div><br><br>
+<!-- The flex Property -->
+                <h3 id="flex_prop">The flex Property</h3>                
+                <p>The flex property is a shorthand property for the <code><span>flex-grow</span>,<span>flex-shrink</span>, and <span>flex-basis</span></code> properties.</p><br><br>
+                <div class="codebox">
+                    <p id="show_code_flexgrow">
+                        &ltstyle&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>align-items: <span>strech</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                        }<br>
+        
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: <span>white</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height: <span>75px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                        }  <br>
+                        &lt/style&gt<br>
+                        &lt/head&gt<br>
+                        &ltbody&gt<br>
+    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtThe flex Property&lt/h1&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gt&lt/p&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt2&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <span>style="flex: 0 0 200px"</span>&gt3&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt4&lt/div&gt<br>
+                        
+                         
+                    &lt/div&gt<br>
+    
+                    &lt/body&gt<br>
+                    &lt/html&gt<br>
+                    
+                    </p>
+                    <a href="./flexItems/flexprop.html">Run Code</a>
+                </div><br><br>
+<!-- The align-self Property --> 
+                <h3 id="align_self">The align-self Property</h3>
+                <p>The align-self property specifies the alignment for the selected item inside the flexible container.</p> 
+                <p>The align-self property overrides the default alignment set by the container's align-items property.</p><br><br>
+                <p>In these examples we use a 200 pixels high container, to better demonstrate the align-self property:</p><br><br>
+                <h4 id="align_self_center"><code>align-self:<span>center</span>;</code></h4><br><br>
+                     
+                <div class="codebox">
+                    <p id="show_code_flexgrow">
+                        &ltstyle&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>height: <span>200px</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                        }<br>
+        
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: <span>white</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: <span>100px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height: <span>75px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                        }  <br>
+                        &lt/style&gt<br>
+                        &lt/head&gt<br>
+                        &ltbody&gt<br>
+    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lth1The align-self Property&lt/h1&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtThe "align-self: center;" aligns the selected flex item in the middle of the container:&lt/p&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt2&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <span>style="align-self: center"</span>&gt3&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt4&lt/div&gt<br>
+                        
+                         
+                    &lt/div&gt<br>
+    
+                    &lt/body&gt<br>
+                    &lt/html&gt<br>
+                    
+                    </p>
+                    <a href="./flexItems/alignself.html">Run Code</a>
+                </div><br><br>   
+                <p>Align the second flex item at the top of the container, and the third flex item at the bottom of the container:</p><br><br>
+                <h4 id="align_self_topandbuttom"><code>align-self:<span>flex-start</span>;</code> &nbsp;&nbsp;<code>align-self:<span>flex-end</span>;</code></h4><br><br>
+
+                <div class="codebox">
+                    <p id="show_code_flexgrow">
+                        &ltstyle&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>height: <span>200px</span>;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                        }<br>
+        
+                        &nbsp;&nbsp;&nbsp;&nbsp;.flex-container &gt div {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>DodgerBlue</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: <span>white</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: <span>100px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin: <span>10px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height: <span>75px</span>;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                        }  <br>
+                        &lt/style&gt<br>
+                        &lt/head&gt<br>
+                        &ltbody&gt<br>
+    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lth1The align-self Property&lt/h1&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtThe "align-self: center;" aligns the selected flex item in the middle of the container:&lt/p&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv class="flex-container"&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt1&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv<span>style="align-self: flex-start"</span>&gt2&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv<span>style="align-self: flex-end"</span> &gt3&lt/div&gt<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gt4&lt/div&gt<br>
+                        
+                         
+                    &lt/div&gt<br>
+    
+                    &lt/body&gt<br>
+                    &lt/html&gt<br>
+                    
+                    </p>
+                    <a href="./flexItems/alignselftop.html">Run Code</a>
+                </div><br><br>
+        </section>
+
+        <section id="css_flexbox_items_properties" class="main-section">
+            <header>CSS Flexbox Items Properties</header><br><br>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><a href="#align_self">align-self</a></td>
+                    <td><p>Specifies the alignment for a flex item (overrides the flex container's align-items property)</p></td>
+                </tr>
+                <tr>
+                    <td><a href="#flex_prop">flex</a></td>
+                    <td><p>A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties</p></td>
+                </tr>
+                <tr>
+                    <td><a href="#flex_basis">flex-basis</a></td>
+                    <td><p>Specifies the initial length of a flex item</p></td>
+                </tr>
+                <tr>
+                    <td><a href="#flex_grow">flex-grow</a></td>
+                    <td><p>Specifies how much a flex item will grow relative to the rest of the flex items inside the same container</p></td>
+                </tr>
+                <tr>
+                    <td><a href="#flex_shrink">flex-shrink</a></td>
+                    <td><p>Specifies how much a flex item will shrink relative to the rest of the flex items inside the same container</p></td>
+                </tr>
+                <tr>
+                    <td><a href="#order_property">order</a></td>
+                    <td><p>Specifies the order of the flex items inside the same container</p></td>
+                </tr>
+            </table>
+        </section>
+            
+        <section id="css_flex_responsive" class="main-section">
+            <header>CSS Flex Responsive</header><br><br>
+
+            <ul>
+                <li><a href="#responsive_flexbox">Responsive Flexbox</a></li>
+                <li><a href="#responsive_image_gallery_using_flexbox">Responsive Image Gallery using Flexbox</a></li>
+                <li><a href="#responsive_website_using_flexbox">Responsive Website using Flexbox</a></li>
+            </ul><br><br>
+
+            <h3 id="responsive_flexbox">Responsive Flexbox</h3>
+            <p>You learned from the CSS Media Queries chapter that you can use media queries to create different layouts for different screen sizes and devices.</p><br>
+
+            <p>For example, if you want to create a <span>two-column</span> layout for most screen sizes, and a <span>one-column</span> layout for small screen sizes (such as phones and tablets), you can change the <span>flex-direction</span> from row to column at a specific breakpoint (800px in the example below):</p><br><br>
+            <div class="codebox">
+                <p id="show_code_flexgrow">
+                    &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;* {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>box-sizing: <span>border-box</span>;</code><br>
+                    }<br>    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex-direction:<span>row</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                    }<br>
+    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-item-left {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex: <span>50%</span>;<br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-item-right {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>dodgerblue;</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex: <span>50%</span>;<br>
+                    }  <br>
+
+                    &nbsp;&nbsp;@media(max-width: 800px) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: <span>column;</span>;<br>
+                    }  <br>
+
+                    &lt/style&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br><br>
+
+                    &lth1Responsive Flexbox&lt/h1&gt<br><br>
+                    &ltp&gtThe "flex-direction: row;" stacks the flex items horizontally (from left to right).&lt/p&gt<br>
+                    &ltp&gtThe "flex-direction: column;" stacks the flex items vertically (from top to bottom).&gt<br>
+                    &ltp&gt&ltb&gtResize the browser window to see that the direction changes when the 
+                    screen size is 800px wide or smaller.&lt/b&gt&lt/p&gt<br><br>
+                    &ltdiv <code>class=<span>"flex-container"</span></code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class=<span>'flex-item-left'</span></code> &gt1&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class=<span>'flex-item-right'</span></code> &gt2&lt/div&gt<br>
+                &lt/div&gt<br><br>
+
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+                
+                </p>
+                <a href="./responsive/responsiveFlex.html">Run Code</a>
+            </div><br><br>
+            <p>Another way is to change the percentage of the <span>flex</span>property of the flex items to create different </p>
+            <p>layouts for different screen sizes. <span>Note</span>that we also have to include<code>flex-wrap:<span>wrap</span>;</code>on the flex container for this example to work:</p><br><br>
+            <div class="codebox">
+                <p id="show_code_flexgrow">
+                    &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;* {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>box-sizing: <span>border-box</span>;</code><br>
+                    }<br>    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-container {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex-wrap:<span>wrap</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: <span>30px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: <span>center</span>;<br>
+                    }<br>
+    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-item-left {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>#f1f1f1</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex: <span>50%</span>;<br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-item-right {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: <span>dodgerblue;</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: <span>10px</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex: <span>50%</span>;<br>
+                    }  <br>
+
+                    &nbsp;&nbsp;@media(max-width: 800px) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.flex-item-right , .flex-item-left {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex: <span>100%</span>;<br>
+                    }  <br>
+
+                    &lt/style&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br><br>
+
+                    &lth1Responsive Flexbox&lt/h1&gt<br><br>
+                    &ltp&gtIn this example, we change the percentage of flex to create different layouts for different screen sizes.&lt/p&gt<br>
+                    &ltp&gt&ltb&gtResize the browser window to see that the direction changes when the 
+                    screen size is 800px wide or smaller.&lt/b&gt&lt/p&gt<br><br>
+                    &ltdiv <code>class=<span>"flex-container"</span></code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class=<span>'flex-item-left'</span></code> &gt1&lt/div&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class=<span>'flex-item-right'</span></code> &gt2&lt/div&gt<br>
+                &lt/div&gt<br><br>
+
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+                
+                </p>
+                <a href="./responsive/responsivewrap.html">Run Code</a>
+            </div><br><br>
+<!-- Responsive Image Gallery using Flexbox -->
+            <h3 id="responsive_image_gallery_using_flexbox">Responsive Image Gallery using Flexbox</h3><br><br>
+            <p>Use flexbox to create a responsive image gallery that varies between four, two or full-width images, depending on screen size:</p>            
+            <div class="codebox">
+                <p id="show_code_flexgrow">
+                    &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;* {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>box-sizing: <span>border-box</span>;</code><br>
+                    }<br>    
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>margin: <span>0</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>font-family:<span>Arial</span>;</code><br>
+                    }<br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.header {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>text-align: <span>center</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>32px</span>;</code><br>
+                    }<br>
+                   
+                    &nbsp;&nbsp;&nbsp;&nbsp;.row {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex-wrap:<span>wrap</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>0 4px</span>;</code><br>
+                    }<br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.column {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex: <span>25%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>max-width:<span>25%</span>;</code><br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>0 4px</span>;</code><br>
+                    }<br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.column img {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>margin-top: <span>8px</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>vertical-align:<span>middle</span>;</code><br>
+                    }<br>
+                    &nbsp;&nbsp;@media(max-width: 800px) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.column {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex: <span>50%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>max-width:<span>50%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    }<br><br>
+
+                    &nbsp;&nbsp;@media(max-width: 600px) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.column {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex: <span>100%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>max-width:<span>100%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    }<br>
+
+
+                    &lt/style&gt<br>
+                    &lt/head&gt<br>
+                    &ltbody&gt<br><br>
+                    &ltdiv class="header" &gt<br><br>    
+
+                    &nbsp;&nbsp; &nbsp;&nbsp;&lth1 Responsive Flexbox &lt/h1&gt<br>
+                    &nbsp;&nbsp; &nbsp;&nbsp;&ltp&gtResize the browser window to see the responsive effect.&lt/p&gt<br><br>
+                    
+                    &lt/div&gt<br><br>
+
+                    &ltdiv <code>class="<span>row</span>"</code> &gt<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>column</span>"</code> &gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/cat_1.jpg.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/chick_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/dragonfly_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/elephen_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/monkey_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/monkey_2.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/pecock_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt<br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>column</span>"</code> &gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/swan_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/tiger_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/cat_1.jpg.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/chick_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/dragonfly_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/elephan_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/monkey_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/monkey_2.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt<br><br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>column</span>"</code> &gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/pecock_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/cat_1.jpg.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/chick_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/dragonfly_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/elephen_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/monkey_1.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltimg <code>src="<span>../jpg/monkey_2.jpg</span>"</code><code>style="<span>width:100%</span>"</code>&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt<br><br>                    
+                &lt/div&gt<br>    
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+                
+                </p>
+                <a href="./responsive/respondsive_gallery.html">Run Code</a>
+            </div><br><br>
+<!--Responsive Website using Flexbox-->
+            <h3 id="responsive_website_using_flexbox">Responsive Website using Flexbox</h3>
+            <p>Use flexbox to create a responsive website, containing a flexible navigation bar and flexible content:</p><br><br>
+            <div class="codebox">
+                <p id="show_code_flexgrow">
+                &lthead&gt<br>    
+                &ltstyle&gt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;* {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>box-sizing: <span>border-box</span>;</code><br>
+                    }<br><br>
+                    &#47&#42 <b style="color:purple">Style the body</b> &#42&#47<br><br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;body {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>margin: <span>0</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>font-family:<span>Arial</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.header {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>text-align: <span>center</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>60px</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background: <span>#1abc9c</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>color:<span>white</span>;</code><br>
+                    }<br>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;.navbar {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display: <span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background:<span>#333</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.navbar a {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>color: <span>white</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>14px 20px</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>text-decoration: <span>none</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>text-align:<span>center</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.navbar a:hover {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>:color:<span>black</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background-color:<span>#ddd</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.row {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>display:<span>flex</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex-wrap:<span>wrap</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.side {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex:<span>30%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background-color:<span>#f1f1f1</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>20px</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.main {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex:<span>70%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background-color:<span>white</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>20px</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.fakeimg {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>width:<span>100%</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background-color:<span>#aaa</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>20px</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;.footer {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>text-align:<span>center</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>background:<span>#ddd</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>padding:<span>20px</span>;</code><br>
+                    }<br>
+
+                    &nbsp;&nbsp;@media screen and(max-width: 700px) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.row .navbar {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>flex-direction: <span>column</span>;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    }<br>
+                &lt/style&gt<br>
+                &lt/head&gt<br>
+                &ltbody&gt<br><br> 
+                &ltdiv style="background:yellow;padding:5px"&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lth4 <code>style="<span>text-align:center</span>"</code>&gtResize the browser window to see the responsive effect.&lt/h4&gt<br>
+                &lt/div&gt<br><br>
+                
+                &ltdiv <code>class="<span>header</span>"</code>&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lth1&gtMy Website&lt/h1&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtWith a &ltb&gtflexible&lt/b&gtlayout.&lt/p&gt<br>
+                &lt/div&gt<br><br>
+
+                &ltdiv <code>class="<span>navbar</span>"</code>&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lta <code>href="<span>#</span>"</code>&gtLink&lt/a&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lta <code>href="<span>#</span>"</code>&gtLink&lt/a&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lta <code>href="<span>#</span>"</code>&gtLink&lt/a&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lta <code>href="<span>#</span>"</code>&gtLink&lt/a&gt<br>
+                &lt/div&gt<br><br>
+
+                &ltdiv <code>class="<span>row</span>"</code>&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>side</span>"</code>&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth2&gt About Me &lt/h2&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth5&gt Photo of me &lt/h5&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>fakeimg</span>"</code> <code>style="<span>height:200px;</span>"</code>&gtImage&lt/div&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltp&gtSome text about me in culpa qui officia deserunt mollit anim..&lt/p&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth3&gtMore Text&lt/h3&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltp&gt Lorem ipsum dolor sit ame. &lt/p&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>fakeimg</span>"</code> <code>style="<span>height:60px;</span>"</code>&gtImage&lt/div&gt&ltbr&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>fakeimg</span>"</code> <code>style="<span>height:60px;</span>"</code>&gtImage&lt/div&gt&ltbr&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>fakeimg</span>"</code> <code>style="<span>height:60px;</span>"</code>&gtImage&lt/div&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt<br><br>
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>main</span>"</code>&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth2&gt TITLE HEADING &lt/h2&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth5&gt Title description, Dec 7, 2017 &lt/h5&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>fakeimg</span>"</code> <code>style="<span>height:200px;</span>"</code>&gtImage&lt/div&gt<br>    
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltp&gt Some text... &lt/p&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltp&gt Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. &lt/p&gt<br>
+                &ltbr&gt<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth2&gt TITLE HEADING &lt/h2&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lth5&gt Title description, Sep 2, 2017 &lt/h5&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltdiv <code>class="<span>fakeimg</span>"</code> <code>style="<span>height:200px;</span>"</code>&gtImage&lt/div&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltp&gt Some text... &lt/p&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ltp&gt Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. &lt/p&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt/div&gt<br>
+                &lt/div&gt<br><br>
+
+                &ltdiv <code>class="<span>footer</span>"</code>&gt<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lth2&gt Footer &lt/h2&gt<br>
+                &lt/div&gt<br><br>
+                &lt/body&gt<br>
+                &lt/html&gt<br>
+
+            </p>    
+
+            <a href="./responsive/responsive_web.html">Run Code</a>
+
+            </div>            
+        </section>
+    </main>
+    
+</body>
+</html>
+<!-- https://codepen.io/freeCodeCamp/full/NdrKKL
+User Story #1: ต้องมี main element ที่มี id="main-doc" ซึ่งเก็บข้อมูลหลักของหน้านี้ไว้ด้านใน (Technical Documentation)
+
+User Story #2: ใน element #main-doc ต้องมี element section หลายตัว โดยทุกตัวต้องมีคลาสเป็น main-section 
+(ต้องมี element ที่มีคลาสเป็น section อย่างน้อย 5 ตัว)
+
+User Story #3: element แรกใน .main-section แต่ละตัว ต้องเป็น header element ซึ่งเก็บข้อความหัวข้อของส่วนนั้นๆ 
+เป็นภาษาอังกฤษ
+
+User Story #4: element section ที่มีคลาสเป็น main-section ต้องมี id เหมือนข้อความใน header ถ้ามีการเว้นวรรคให้ใช้
+underscore แทน _ (เช่น ถ้า section นั้นมี header เป็น "JavaScript and Java" แล้ว section นั้นจะต้องมี id="JavaScript_and_Java").
+
+User Story #5: .main-section ต้องมี p element อยู่ด้านใน อย่างน้อย 10 ตัว
+
+User Story #6: .main-section ต้องมี code element อยู่ด้านใน อย่างน้อย 5 ตัว
+
+User Story #7: .main-section ต้องมี li element อยู่ด้านใน อย่างน้อย 5 ตัว
+
+User Story #8: ต้องมี nav element ที่มี id="navbar"
+
+User Story #9: navbar element ต้องมี header element 1 อัน ที่เป็นข้อความอธิบายหัวข้อของเอกสารนั้นๆ
+
+User Story #10: ใน navbar ต้องมีลิงก์ (a) element ที่มีคลาสเป็น nav-link และต้องมีจำนวนของ element ที่มีคลาสเป็น nav-link เท่ากับ element ที่มีคลาสเป็น main-section
+
+User Story #11: header ใน navbar ต้องมาก่อนลิงก์ (a) ทุกอันใน navbar
+
+User Story #12: ทุก element ที่มีคลาสเป็น nav-link ต้องมีข้อความที่เหมือนกับ header ในแต่ละ section (เช่น ถ้ามี header ที่มีข้อความว่า "Hello world" แล้ว navbar ก็จะต้องมี element ที่มีข้อความข้างในเป็น "Hello world")
+
+User Story #13: เมื่อคลิกที่ navbar element เบราว์เซอร์จะต้องลิงก์ไปส่วนที่เกี่ยวข้องที่อยู๋ใน main-doc element (เช่น ถ้าคลิกที่ nav-link ที่มีข้อความ "Hello world" เบราว์เซอร์จะต้องลิงก์ไปที่ section ที่มี id เป็น "hello_world" และมี header ที่มีข้อความ "Hello world")
+
+User Story #14: element ที่มี id="navbar" ต้องอยู่ที่ด้านซ้ายของหน้าจอ และผู้ใช้ต้องเห็นได้ตลอดเวลา บนอุปกรณ์ขนาดปกติ (เช่น โน๊ตบุ๊ค)
+
+User Story #15: หน้า Technical Documentation ต้องใช้ media query อย่างน้อย 1 อัน-->

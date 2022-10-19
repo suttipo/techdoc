@@ -272,7 +272,9 @@ td > a:hover {
     background-color: #82bcf2;
 }
 @media only screen and (max-width: 600px) {
+
     html{
+
         font-size: 16px;
     }
     #navbar {
@@ -284,10 +286,13 @@ td > a:hover {
         z-index: 99;
         
     }
+
     #navbar header {
+
         width:100%;
         text-align: center;
     }
+
     #nav-link-menu {
         width:100%;
         height:auto;
@@ -295,6 +300,7 @@ td > a:hover {
         flex-wrap:wrap;
         background-color:#10EFEB;
     }
+    
     #nav-link-menu a{
         width:100%;
         font-size: 5px;

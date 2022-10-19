@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media  screen and (max-width: 600px) {
 
     html{
 
@@ -33,6 +33,9 @@
         font-size: 5px;
         text-align: center;
        
+    }
+    .nav-link:hover {
+        background-color: #99eeec;
     }
     
     #main-doc {

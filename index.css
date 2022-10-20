@@ -249,6 +249,12 @@ p > span {
     color:#1083EF;
     padding: .2rem;
 }
+.span_color_blue {
+    color:blue;
+}
+.color_purple {
+    color:purple;
+}
 /*table*/
 table {
     width:100%;
@@ -270,4 +276,55 @@ td {
 }
 td > a:hover {
     background-color: #82bcf2;
+}
+
+@media screen and (max-width: 400px) {
+
+    html{
+
+        font-size: 16px;
+    }
+    #navbar {
+        position:fixed;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:100%;
+        height: 40vh;
+        z-index: 99;
+        
+    }
+
+    #navbar > header {
+
+        width:100%;
+        text-align: center;
+    }
+
+    #nav-link-menu {
+        width:100%;
+        height:auto;
+        display: flex;
+        flex-wrap:wrap;
+        background-color:#10EFEB;
+    }
+
+    #nav-link-menu > a{
+        width:100%;
+        font-size: 5px;
+        text-align: center;
+       
+    }
+    .nav-link:hover {
+        background-color: #99eeec;
+    }
+    
+    #main-doc {
+       width:100%;
+       margin-left: 0;
+        
+    }
+    .main-section {
+        width:95%;
+        padding-top:40vh;
+    }
 }
